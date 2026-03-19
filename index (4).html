@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ГосПриём — запись граждан на приём</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <header class="topbar">
+      <div class="brand-wrap">
+        <div class="brand-mark">Г</div>
+        <div>
+          <div class="brand-title">ГосПриём</div>
+          <div class="brand-subtitle">Цифровая запись граждан на приём</div>
+        </div>
+      </div>
+      <nav class="topnav">
+        <a href="#services">Услуги</a>
+        <a href="#form-card">Запись</a>
+        <a href="#faq">Вопросы</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-content">
+          <span class="hero-badge">Городской цифровой сервис</span>
+          <h1>Запишитесь на приём в удобное время без очередей</h1>
+          <p>
+            Быстрая запись граждан к специалистам администрации, МФЦ и профильных подразделений.
+            Выберите услугу, дату и удобное окно приёма.
+          </p>
+
+          <div class="hero-points">
+            <div class="point-card">
+              <strong>3 шага</strong>
+              <span>до подтверждения записи</span>
+            </div>
+            <div class="point-card">
+              <strong>Онлайн</strong>
+              <span>без звонков и бумажных заявок</span>
+            </div>
+            <div class="point-card">
+              <strong>Уведомления</strong>
+              <span>по телефону и электронной почте</span>
+            </div>
+          </div>
+        </div>
+
+        <aside class="form-card" id="form-card">
+          <div class="form-card-header">
+            <h2>Форма записи</h2>
+            <p>Заполните данные, чтобы подтвердить визит</p>
+          </div>
+
+          <form id="appointmentForm" class="appointment-form">
+            <label>
+              <span>ФИО</span>
+              <input type="text" id="fullName" placeholder="Иванов Иван Иванович" required />
+            </label>
+
+            <label>
+              <span>Телефон</span>
+              <input type="tel" id="phone" placeholder="+7 (900) 123-45-67" required />
+            </label>
+
+            <label>
+              <span>Электронная почта</span>
+              <input type="email" id="email" placeholder="example@mail.ru" required />
+            </label>
+
+            <label>
+              <span>Услуга</span>
+              <select id="service" required>
+                <option value="">Выберите услугу</option>
+                <option>Личный приём граждан</option>
+                <option>Оформление справки</option>
+                <option>Жилищный вопрос</option>
+                <option>Социальная поддержка</option>
+                <option>Консультация по городским услугам</option>
+              </select>
+            </label>
+
+            <div class="form-row">
+              <label>
+                <span>Дата</span>
+                <input type="date" id="date" required />
+              </label>
+
+              <label>
+                <span>Время</span>
+                <select id="time" required>
+                  <option value="">Выберите</option>
+                  <option>09:00</option>
+                  <option>09:30</option>
+                  <option>10:00</option>
+                  <option>10:30</option>
+                  <option>11:00</option>
+                  <option>11:30</option>
+                  <option>14:00</option>
+                  <option>14:30</option>
+                  <option>15:00</option>
+                  <option>15:30</option>
+                </select>
+              </label>
+            </div>
+
+            <label>
+              <span>Комментарий</span>
+              <textarea id="comment" rows="4" placeholder="Кратко опишите вопрос"></textarea>
+            </label>
+
+            <label class="checkbox-row">
+              <input type="checkbox" id="agree" required />
+              <span>Я согласен на обработку персональных данных</span>
+            </label>
+
+            <button type="submit" class="primary-btn">Записаться на приём</button>
+          </form>
+
+          <div id="successMessage" class="success-message hidden">
+            <div class="success-icon">✓</div>
+            <h3>Запись оформлена</h3>
+            <p>Подтверждение отправлено по указанным контактам.</p>
+          </div>
+        </aside>
+      </section>
+
+      <section class="services" id="services">
+        <div class="section-title">
+          <span>Популярные услуги</span>
+          <h2>Что можно оформить через сервис</h2>
+        </div>
+
+        <div class="service-grid">
+          <article class="service-card">
+            <h3>Приём обращений</h3>
+            <p>Запись на личный приём граждан по городским и районным вопросам.</p>
+          </article>
+          <article class="service-card">
+            <h3>Социальные консультации</h3>
+            <p>Подбор времени для консультации по мерам социальной поддержки.</p>
+          </article>
+          <article class="service-card">
+            <h3>Документы и справки</h3>
+            <p>Предварительная запись на подачу и получение документов.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="faq" id="faq">
+        <div class="section-title">
+          <span>Частые вопросы</span>
+          <h2>Как работает запись</h2>
+        </div>
+        <div class="faq-list">
+          <div class="faq-item">
+            <h3>Как быстро приходит подтверждение?</h3>
+            <p>Обычно в течение нескольких секунд после отправки формы.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Можно ли отменить запись?</h3>
+            <p>Да, в подтверждении будет указана информация для изменения или отмены визита.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Нужны ли документы?</h3>
+            <p>Да, перечень документов зависит от выбранной услуги и сообщается заранее.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
